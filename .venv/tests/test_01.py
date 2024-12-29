@@ -1,8 +1,9 @@
 from selenium import webdriver
 import time
+from pages.search import mapleLandSearchPage
 
 def test_01(browser):
-    url = "http://www.naver.com"
-    #driver = webdriver.Chrome()
-    browser.get(url)
+    search_page = mapleLandSearchPage(browser)
+
+    search_page.load()
     time.sleep(5)
